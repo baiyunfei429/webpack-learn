@@ -1,5 +1,5 @@
 {
-  "name": "zhangwang-webpack",
+  "name": "webpack-learn",
   "author": "baiyunfei429@aliyun.com",
   "license": "ISC",
   "version": "1.0.0",
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack",
-    "server": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open",
     "build": "set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress",
     "build:prod": "webpack --progress --colors --watch --config webpack.prod.js",
     "bai:dev": "set NODE_ENV=production && webpack --config ./webpack.config.js --progress",
