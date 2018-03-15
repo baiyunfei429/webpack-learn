@@ -1,5 +1,6 @@
 var path = require("path")  
 var htmlWebpackPlugin = require('html-webpack-plugin');  
+var BaiHtmlWebpackPlugin = require('./my-plugins/bai-html-webpack-plugin');
 module.exports = {  
     entry :　{  
        main :  './multiPage/main.js',//入口js文件1  
@@ -58,6 +59,7 @@ module.exports = {
              collapseWhitespace : true //打包后删除空格 
              }*/  
             chunks : ['c']  
-        })  
+        }),
+        new BaiHtmlWebpackPlugin({ options: 'baiyunfei' }) 
     ]  
 }  
