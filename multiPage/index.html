@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <!--若打包后的某些文件想放到head中，某些文件想放到body中，可以如下 -->  
+    <title><%= htmlWebpackPlugin.options.title%></title>  
+  
+</head>  
+<body>  
+  
+<h1>  
+    作者:<%= htmlWebpackPlugin.options.author%>  
+    时间:<%= htmlWebpackPlugin.options.date%>  
+    <!-- 打印htmlWebpackPlugin所有的参数-->  
+</h1>  
+<% for(var key in htmlWebpackPlugin){%>  
+<%= key%>  
+<%}%>  
+<hr>  
+<% for(var key in htmlWebpackPlugin.files){%>  
+<%= key%> : <%=JSON.stringify(htmlWebpackPlugin.files[key])%>  
+</br>  
+<%}%>  
+<hr>  
+<% for(var key in htmlWebpackPlugin.options){%>  
+<%= key%> : <%=JSON.stringify(htmlWebpackPlugin.options[key])%>  
+</br>  
+<%}%>  
+</body>  
+</html>  

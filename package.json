@@ -12,6 +12,7 @@
     "build": "set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress",
     "build:prod": "webpack --progress --colors --watch --config webpack.prod.js",
     "bai:dev": "set NODE_ENV=production && webpack --config ./webpack.config.js --progress",
+    "multipage": "webpack --config ./webpack.multipage.config.js --progress",
     "bai:build": "set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress"
   },
   "dependencies": {
